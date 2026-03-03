@@ -38,6 +38,8 @@ The system uses the Strategy Pattern to dynamically switch between:
 
     *   Ollama (local models)
 
+    *   Groq
+
 llm = get_llm_strategy()
 response = llm.chat(system_prompt, user_prompt)
 
