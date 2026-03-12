@@ -18,15 +18,15 @@ An AI-powered multi-agent system that simulates a real-world SDLC workflow to co
         ↓
     Business Analyst (PRD)
         ↓
-    Architect (HLD)
+    Human in the loop
         ↓
-    Tech Lead (LLD)
+    Schema Anlyzer
         ↓
     Schema Generator
         ↓
-    Alignment Reviewer
+    Human in the Loop
         ↓
-    Iteration Until Quality Threshold Met
+    Create Collection on DB
 
 
 
@@ -98,17 +98,16 @@ Make sure Ollama is installed.
 
 4️⃣ Run the Application
 
-python main.py
+python run.py
 
 
 📊 What It Does
 
 1. Generates PRD from product idea
 2. Requires user confirmation before proceeding
-3. Creates HLD & LLD
-4. Generates MongoDB & PostgreSQL schemas
-5. Evaluates schema against original requirement
-6. Iteratively refines schema based on alignment score
+3. Schema Analyzer agents starts analyzing
+4. Schema Generates Schema
+5. Requires human in the loop to confirm schema
 
 
 🧩 Tech Stack
@@ -117,3 +116,4 @@ python main.py
 2. Strategy Pattern
 3. OpenAI API
 4. Ollama Local LLM
+5. Groq LLM
